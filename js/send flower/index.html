@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //json object
+        class Flower{
+
+        }
+        const fzq={
+             name: '范志强',
+             age:20,
+             hometown:'上饶',
+             isSingle:false,
+             girlFriend:'小仙女',
+             house:null
+        }
+        const hzq={//对象 Object
+            name:'黄志乾', //字符串,单引号里面获取
+            hobbies:['练字','王者'],//Array JS里没有独立的数组对象,Array Object
+            age:21,// 数值 类型 Number
+            hometown:'抚州',
+            isSingle:true, //boolean
+            firlFriend:undefined,//未定义 概念都没有(js语言特别注意)
+            house:null, //为空(js语言特别注意)
+            //函数对象
+            //gf 参数(形参) 类型 是对象JSON Object
+            sendFlower:function(gf){//gf是形参，可以交给任何一个对象
+                const flowers=new Flower(11);
+                 gf.receiveFlower(flowers,this);//this指向hzq
+            }
+        }
+        const xm={
+            name:'小美',
+            age:19,
+            moods:50,
+            receiveFlower:function(flower,sender){
+                //xq<80 丑拒
+                 console.log(this.name+'收到了'+sender.name+'的花')
+            }
+        }
+        const xh={
+            name:'小红',
+            hometown:'抚州',
+            age:19,
+            receiveFlower:function(flower,sender){
+                //  console.log('收到了花')
+                if(sender.name=='黄志乾'){
+                    // console.log('我会帮你转交给小美的')
+                    //心情好心情坏
+                    //定时器
+                    setTimeout((function(){
+                        xm.moods=100;
+                        xm.receiveFlower(flower,sender)
+                    },2000)
+                }else{
+                console.log(this.name+'收到了'+sender.name+'的花')//在对象内部，this会指向对象本身,即xh.name=this.name
+                }
+            }
+        }
+    </script>
+</body>
+</html>
