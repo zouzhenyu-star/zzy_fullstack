@@ -11,9 +11,9 @@ const SECRET_KEY = '8bslGVlFHNZFKPj5aKr1gXTQD9GamCGE';
 const image = fs.readFileSync("number.png").toString("base64");
 
 
-const client = new ApiImageClassifyClient(APP_ID,APP_KEY,SECRET_KEY);
+const client = new AipOcrClient(APP_ID,APP_KEY,SECRET_KEY);
 const options = {};
-option["multi_detect"] = "true";
+options["multi_detect"] = "true";
 
 client
       .licensePlate(image,options)
