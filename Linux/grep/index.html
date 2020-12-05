@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="telForm">
+        <label for="telInput">手机号:</label>
+        <input type="text" id="telInput" placeholder="请输入手机号" minlength="11" maxlength="11" pattern="^1[345789][0-9]{9}$">
+        <button type="submit">提交按钮</button>
+    </form>
+    <script>
+        //页面上所有的form都归document.forms
+        const oForm = document.forms["telForm"];
+        // console.log(oForm);
+        oForm.addEventListener("submit", (event) => {
+            // alert('------')
+            //阻止默认行为
+            event.preventDefault();
+            let tel = oForm["telInput"].value;
+            console.log(tel);
+            if(/^1[345789][0-9]{9}$/.test(tel)){
+                // 正则表达式: [0-9]{9} []表示取值范围  {}表示长度  .test()测试有效性，返回true即为有效数值
+                // ^ 开始   $ 结束
+                console.log('手机号格式正确')
+            } else{
+                alert('手机号格式有误');
+            }
+
+        })
+    </script>
+</body>
+</html>

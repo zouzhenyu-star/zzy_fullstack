@@ -12,7 +12,7 @@ const SECRET_KEY = 'zirhqln3qg50DeiOdGQN6QiXrGRMT4Go';
 
 const client = new ApiImageClassifyClient(APP_ID,APP_KEY,SECRET_KEY);
 // const fs = require('fs');
-const image = fs.readFileSync("./weilaiep9.png").toString("base64");
+const image = fs.readFileSync("./ix35.png").toString("base64");
 
 client
     .carDetect(image)
