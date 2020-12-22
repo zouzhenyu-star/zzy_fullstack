@@ -1,0 +1,5 @@
+<!--手机产品数据已经到了前端-->
+<view wx:for="{{phone_list}}" wx:key="_id" wx:for-item="phone" bindtap = "viewItem">
+  <van-card thumb="{{phone.image}}" title="{{phone.title}}" price="{{phone.price}}" data-id="{{phone._id}}"></van-card>
+</view>
+  
