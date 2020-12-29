@@ -25,3 +25,9 @@
     - 总结一下搜索体验 把自己当小白
         placeholder + padding-left + bindinput + bindConfirm + search 图标
         
+
+- 页面的生命周期
+    谁先发生，   适合做什么
+    onload 先，然后到 onshow，最后 onready 
+    onLoad 加载wxml,wxss js
+    onShow  wxml + wxss 渲染， js 还没执行完 还不能交互
