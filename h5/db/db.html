@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const request = window.indexedDB.open('kft',2);
+        //全局
+        let db;
+        request.onerror = function (event) {
+            console.log('数据库打开报错');
+        }
+        request.onsuccess = function(event) {
+            //数据库局部变量
+            db = request.result; //数据库名称
+            console.log('数据库打开成功');
+            add();
+        }
+        request.onupgradeneeded = function (event) {
+            // console.log('upgrade')
+            db = event.target.result;
+            if (!db.objectStoreNames.contains('person')){
+                objectStore = db.createObjectStore('person',{keyPath:'id'});
+                objectStore.createIndex('name','name',{unique:false})
+                objectStore.createIndex('email','email',{unique:false})
+            }
+        }
+        function add() {
+            var request = db.transaction(['person'],['readwrite'])
+            .objectStore('person')
+            .add({id:1,name:'张三',age:24,email:'zhangsan@qq.com'});
+            request.onsuccess = function (event) {
+                console.log('数据库写入成功');
+            }
+            request.onerror = function (event) {
+                console.log('数据库写入失败');
+            }
+        }
+
+        function read() {
+            let transaction = db.transaction(['person']);
+            let onjectStore = transaction.objectStore('person');
+            var request = objectStore.get(1);
+            request.onsuccess = function(event) {
+                if (request.result) {
+                    //解构
+                    const {id, name,age, email} = request.result;
+                    console.log(id,name,age,email)
+                }
+            }
+        }
+    </script>
+</body>
+</html>
