@@ -1,48 +1,26 @@
-# 字节react 技术栈要求   
-    - react
-        jspang  react-router  redux  打卡 
-        react hooks  class 很少  函数式组件
-        ts
-    - 牙羽 js 系列 小黄书
-    - 山月  神三元  面试系列 
-    - leetcode  
+# 当你在浏览器输入了一个 URL 后，看到页面发生了什么？
 
+# 当你有了一台云服务器， 可以干什么
+  docker 一台
+  有了一台云服务器相当于有了一个  IP 
+  - IP 
+    121.36.220.89 
+    IP 地址放在浏览器的时候，浏览器域名或IP访问，HTTPS
+    Bginx 是一个高性能的HTTP和反向代理的Web服务器
 
-1. 开发流程 react+hooks+ts  大型项目  webpack 、webpack-cli、 webpack-dev-server
-webpack-cli  4.0 版本 与webpack 5兼容问题
-手动的指定 安装 webpack-cli 3
+  进入 putty之后 先输入 root 再输入管理员密码，然后再输入 yum -y install gcc  gcc-c++ autoconf pcre-devel make automake
 
-    1.1 配置开发流程 三兄弟
-        --hot  热更新 
-    1.2 css-loader style-loader file-loader url-loader 
-        webpack loader机制 转译 或编译   
-        html-webpack-plugin
-        mini-css-extract-plugin webpack 插件 
-        awesome-typesript-loader ts -> js 
-    1.3 typescript-loader  typescript 
-        tsconfig.json 
-    1.4 js   babel es6 -> es5
-        @babel/polyfill ? 
-        babel-loader 也坑  
-        .babelrc
+安装一个依赖
+然后再安装依赖yum -y install wget httpd-tools vim
 
-    1.5 webpack.config.js 
-        entry-> output 
-        module test loader 
+安装  ps aux | grep nginx
 
-    1.6  src/ index.html  root
+ yum -y install gcc  gcc-c++ autoconf pcre-devel make automake
+     yum -y install wget httpd-tools vim
+    yum list | grep nginx
+    yum install nginx
+    nginx（启动服务器）
+     ps aux | grep nginx
 
-2. react  react-dom
-    ts + react 这才是阿里郎
-    npm i @types/react   @types/react-dom  react的类型约定
-    ts 类型化的js 
-- app.tsx
-    根组件 tsx webpack -> ts-loader -> babel-loader
-    - index.tsx 
-        入口文件 webpack entry 打理
-
-    - react 16 后 ，可以在函数组件里直接使用状态，全面拥抱函数式编程
-        useState 超级函数
-        1. 创建了 name 状态
-        2. setName 修改状态的方法也有了
-        3. 初始值
+    - putty 远程 ssh 链接 华为云的服务器
+      root passward
