@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // res 运算符 ...
+        const fn = (...args) => {  //形参默认取第一个值,如果没有则设一个默认值
+            // 内置的对象  运行时有
+            // not defined  undefined
+            // console.log(arguments.length,b,arguments[0],arguments[1],arguments[2]);
+            // console.log(typeof b);
+            console.log(args);
+        }   
+        // js 函数传参也不严格
+        fn();
+
+        // const fn1 = function(b=1) {  //形参默认取第一个值,如果没有则设一个默认值
+        //     // 内置的对象  运行时有
+        //     // not defined  undefined
+        //     // console.log(arguments.length,b,arguments[0],arguments[1],arguments[2]);
+        //     console.log(typeof b);
+        // }   
+        // // js 函数传参也不严格
+        // fn1();
+    </script>
+</body>
+</html>
