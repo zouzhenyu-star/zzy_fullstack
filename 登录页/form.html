@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body class="container" style="height: 1000px;width: 1200px;">
+    <!--查询数据-->
+    <div class="" style="height: 600px;width: 1000px;margin:auto">
+        <div class="border border-info rounded mb-4 p-4 text-center" style="background-color: rgba(240, 255, 255, 0.5)">
+            <form action="#" method="post">
+                请输入区域编号或区域名进行查询:<input class="m-4" type="text" name="region_code">
+                <input class="ml-4 btn btn-info" type="button" value="查询" onclick="login();" />
+            </form>
+        </div>
+        <div class="p-2 text-center border border-info rounded border-radius: 10px;"
+            style="background-color: rgba(240, 255, 255, 0.5)">
+            <form action="#" method="post">
+
+                查询结果为:<br>
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th>区域编码</th>
+                            <th>区域名字</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </form>
+        </div>
+    </div>
+
+    <!--添加数据-->
+    <div class="" style="height: 600px;width: 1000px;margin:auto">
+        <div class="border border-info rounded m-4 p-4 text-center" style="background-color: rgba(240, 255, 255, 0.5)">
+            <form action="#" method="post">
+                请输入要添加的区域<br>
+               <label for="region_code">区域编码</label> <input class="m-4" type="text" name="region_code" placeholder="例如：833300"><br>
+               <label for="region_code">区域名字</label> <input class="m-4" type="text" name="region_code" placeholder="当前居住区域的名字"><br>
+                <input class="btn btn-info" type="button" value="添加" onclick="login();" />
+            </form>
+        </div>
+    </div>
+
+    <!--删除数据-->
+    <div class="" style="height: 600px;width: 1000px;margin:auto">
+        <div class="border border-info rounded mb-4 p-4 text-center" style="background-color: rgba(240, 255, 255, 0.5)">
+            <form action="#" method="post">
+                请输入要删除数据的区域编号:<input class="m-4" type="text" name="region_code">
+                <input class="btn btn-danger ml-4" type="button" value="删除" onclick="login();" />
+            </form>
+        </div>
+    </div>
+
+    <!--修改数据-->
+    <div class="" style="height: 600px;width: 1000px;margin:auto">
+        <div class="border border-info rounded m-4 p-4 text-center" style="background-color: rgba(240, 255, 255, 0.5)">
+            <form action="#" method="post">
+                请进行数据修改:<br>
+               <label for="region_code">请输入原区域编码</label> <input class="m-4" type="text" name="region_code" placeholder="例如：833300"><br>
+               <label for="region_code">请输入新区域编码</label> <input class="m-4" type="text" name="region_code" placeholder="例如：833300"><br>
+               <label for="region_code">请输入区域名字</label> <input class="m-4" type="text" name="region_code" placeholder="当前居住区域的名字"><br>
+                <input class="btn btn-info" type="button" value="添加" onclick="login();" />
+            </form>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

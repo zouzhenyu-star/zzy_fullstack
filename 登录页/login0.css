@@ -1,0 +1,57 @@
+body {
+    background-image: url("小区1.jpg");;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+ 
+#login_frame {
+    width: 1000px;
+    height: 270px;
+    padding: 30px;
+ 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -460px;
+    margin-top: -200px;
+ 
+    /* background-color: rgba(240, 255, 255, 0.5); */
+ 
+    border-radius: 10px;
+    text-align: center;
+}
+
+ 
+ 
+#btn_login {
+    font-size: 20px;
+    font-family: 宋体;
+    margin-left: 63px;
+ 
+    width: 170px;
+    height: 70px;
+    line-height: 28px;
+    text-align: center;
+ 
+    color: white;
+    background-color: #3186a8;
+    border-radius: 6px;
+    border: 0;
+ 
+    float: left;
+}
+
+#button_login {
+    font-size: 19px;
+    font-family: 宋体;
+    width: 140px;
+    height: 43px;
+    margin-right: 75px;
+    line-height: 28px;
+    text-align: center;
+}
+ 
+#login_control {
+    padding: 0 18px;
+    margin-top: 80px;
+}
