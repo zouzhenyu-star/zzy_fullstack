@@ -1,0 +1,37 @@
+1.
+
+position: relative;属性相当于 把当前进行绝对定位，即定义为主体
+position: relative;下的 position: absolute;属性相当于是主体的相对物体
+它的位置时基于主体的位置来定位的
+.line {
+      width: 20px;
+      height: 400px;
+      position: relative;
+    }
+    .ball {
+      width: 60px;
+      height: 60px;
+      bottom: -60px;
+      left: -20px;
+      position: absolute;
+例如上述代码中 ball 的位置时相对于 line 的 
+ball 中的 bottom: -60px; 属性相当于是在 line 的属性的基础上进行 调整的
+实际 ball 的位置是在 460 px
+
+2.
+
+同时，这里也需要注意 位置属性，
+如果出现了 top属性，如top: 20px
+在相对定位的情况下， 子元素会出现在 父元素 位置下部的20px 的地方，
+如果出现了 bottom: -20px
+在相对定位的情况下， 子元素会出现在 父元素 位置上部的20px 的地方，
+
+3. 
+
+当不存在父级relative的包裹时，多个relative则为 兄弟关系，
+它们以相邻的 父级元素 进行定位
+
+4. 
+
+当父元素也出现了 left、top等相关属性 时，子元素不需要参照移动后的父元素
+只需要参照移动前的 父元素 位置即可
